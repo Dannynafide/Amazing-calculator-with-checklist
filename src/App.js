@@ -1,18 +1,21 @@
-import './App.css';
-import Display from './components/Display/Display';
-import Keypad from './containers/Keypad/Keypad';
+import React, {Suspense} from 'react';
+import {useAuth} from './context/authContext';
+import './theme/globalStyle.scss';
+
+const AuthenticatedApp = React.lazy(() =>
+  import('./page/AuthenticatedApp/index')
+);
+const UnauthenticatedApp = React.lazy(() =>
+  import('./page/UnauthenticatedApp/UnauthenticatedApp')
+);
 
 function App() {
+  const {user} = useAuth();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Amazing Calculator with checklist.</p>
-      </header>
-      <hr />
-      <Display value="1200" />
-      <hr />
-      <Keypad />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
+    </Suspense>
   );
 }
 

@@ -1,0 +1,133 @@
+@use '../../../theme/font.scss';
+
+:root {
+  --color-delete-icon: white;
+}
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+// The mixin
+@mixin menu(
+  $width: 1.5rem,
+  $height: rem(2),
+  $gutter: rem(3),
+  $color: white,
+  $round: 0,
+  $transition-duration: 0.3s
+) {
+  @if unit($width) == 'px' {
+    $width: rem($width);
+  }
+  @if unit($height) == 'px' {
+    $height: rem($height);
+  }
+  @if unit($gutter) == 'px' {
+    $gutter: rem($gutter);
+  }
+
+  // Set margins
+  $margin: $height + $gutter;
+  $margin-left: $width / 2;
+  $margin-top: $height / 2;
+
+  // Set specific styles for each bar
+  $top: $height + $gutter;
+
+  // set global Variables
+  $menu-height: $height !global;
+  $menu-gutter: $gutter !global;
+  $menu-color: $color !global;
+  $menu-margin: $margin !global;
+  $menu-margin-left: $margin-left !global;
+  $menu-margin-top: $margin-top !global;
+  $menu-top: $top !global;
+
+  // The code for the span
+  user-select: none;
+  position: absolute;
+  margin: #{$margin-top} auto #{$margin} -#{$margin-left};
+  text-indent: -999em;
+  top: 50%;
+  left: 50%;
+  margin-top: -#{$menu-height/2};
+  cursor: pointer;
+
+  // Set styles to bars
+  &,
+  &:before,
+  &:after {
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    transition: $transition-duration;
+    opacity: 1;
+    @if $round != 0 {
+      border-radius: $round;
+    }
+  }
+  // Bottom and top bar
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+  }
+
+  // Top bar
+  &:before {
+    top: -#{$top};
+  }
+
+  // Bottom bar
+  &:after {
+    top: #{$top};
+  }
+}
+
+@mixin menu-close-rotator {
+  &:before,
+  &:after {
+    top: 0px;
+    margin-top: -#{($menu-height/2) + ($menu-gutter + $menu-height)};
+    @content;
+  }
+  & {
+    transform: rotate(360deg);
+    background-color: transparent;
+  }
+  &:before {
+    transform: translateY($menu-gutter + $menu-height) rotate(-45deg);
+  }
+  &:after {
+    transform: translateY($menu-gutter + $menu-height) rotate(45deg);
+  }
+}
+
+.burger {
+  display: block;
+  position: relative;
+  padding: 7px;
+  box-shadow: 0 0 grid(1) rgba(0, 0, 0, 0.25), 0 0 grid(0.2) rgba(0, 0, 0, 0.1);
+
+  margin: 0.5rem;
+
+  span {
+    @include menu(1.3rem, 0.125rem, 0.3rem, var(--color-delete-icon));
+  }
+}
+
+.burger3 {
+  input:checked + span {
+    @include menu-close-rotator();
+  }
+}
+
+// Source: https://codepen.io/silvandiepen/pen/rZaOGR

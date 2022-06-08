@@ -1,0 +1,72 @@
+@use '../../../theme/colors.scss';
+@use '../../../theme/font.scss';
+
+.nav-links__btn {
+  align-self: end;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  /* Text */
+  text-align: center;
+  text-transform: uppercase;
+  color: font.$colorHidden;
+  font-size: font.$xs;
+
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  line-height: font.$xs;
+
+  &.active {
+    color: font.$colorPrimary;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    .nav-links__btn--underline {
+      &:after {
+        backface-visibility: hidden;
+        border-color: colors.$borderActive;
+        width: 95%;
+      }
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    .nav-links__btn--underline {
+      &:after {
+        backface-visibility: hidden;
+        border-color: colors.$borderActive;
+        transition: width 250ms ease-in-out;
+        width: 95%;
+      }
+    }
+  }
+
+  .nav-links__btn--underline {
+    &:before,
+    &:after {
+      backface-visibility: hidden;
+      border: 1.5px solid rgba(255, 255, 255, 0);
+      border-radius: 2px;
+      bottom: -2px;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      transition: all 180ms ease-in-out;
+      width: 30px;
+    }
+
+    &:before {
+      top: 5px;
+      width: 95%;
+      border-color: font.$colorHidden;
+    }
+  }
+}

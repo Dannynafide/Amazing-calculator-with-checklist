@@ -10,6 +10,7 @@ module.exports = {
     'airbnb',
     'plugin:react/jsx-runtime',
     'prettier',
+    'plugin:react-hooks/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -20,7 +21,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
+    'react/jsx-filename-extension': [1, {extensions: ['.js']}],
     'react/destructuring-assignment': [0, 'always'],
   },
 };

@@ -1,0 +1,13 @@
+@use '../../theme/font';
+
+.nav-links {
+  /* Remove bullets */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 7px;
+}

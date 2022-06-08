@@ -1,0 +1,15 @@
+@use '../../theme/colors.scss';
+@use '../../theme/font.scss';
+
+.main-template {
+  display: inline-block;
+  width: 300px;
+  color: font.$colorPrimary;
+  background-color: colors.$background;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main-template__calculator {
+  padding: 20px;
+  width: 300px;
+}

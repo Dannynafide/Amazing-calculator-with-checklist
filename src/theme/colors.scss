@@ -1,0 +1,19 @@
+$primary: #7ad6dc;
+$primaryLighten: #a2e2e7; // 10%
+$primaryDarken: #52cad1; // 10%
+
+$secondary: rgb(219, 239, 180); // #DBEFB4
+$secondaryLighten: #ebf6d6; // 8%
+$secondaryDarken: #c7e68a; // 10%
+
+$border: #596168;
+$borderActive: #9eacb7;
+$background: #3e4246;
+
+$error: #e6203b;
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  error: $error;
+}

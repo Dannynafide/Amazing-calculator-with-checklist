@@ -1,0 +1,12 @@
+@use '../../theme/font.scss';
+@use '../../theme/colors.scss';
+
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: font.$xs;
+  letter-spacing: 1px;
+  min-height: 70px;
+  margin: 7px 0px;
+}

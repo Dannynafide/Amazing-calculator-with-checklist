@@ -1,0 +1,23 @@
+@use '../theme/colors.scss' as colors;
+@use '../theme/font.scss' as font;
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: font.$s;
+}
+
+body {
+  background-color: #7d8890;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 400;
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

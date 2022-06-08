@@ -1,0 +1,26 @@
+@use '../../../../theme/colors.scss' as colors;
+@use '../../../../theme//font.scss' as font;
+
+.motto {
+  margin: 30px 0 10px 0;
+  font-size: font.$s;
+  color: font.$colorSecondary;
+  line-height: 1px;
+  text-align: left;
+
+  p {
+    line-height: 25px;
+  }
+
+  & :nth-child(2) {
+    font-size: 32px;
+  }
+}
+
+.no-math-operation {
+  color: font.$colorSecondary;
+  font-size: font.$m;
+  margin: 30px 0px 100px 0;
+  line-height: 32px;
+  text-align: left;
+}

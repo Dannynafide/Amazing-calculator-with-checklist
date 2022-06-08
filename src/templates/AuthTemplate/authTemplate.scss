@@ -1,0 +1,35 @@
+@use '../../theme/colors.scss' as colors;
+@use '../../theme/font.scss' as font;
+@import url(../MainTemplate/MainTemplate.scss);
+
+.auth-template {
+  padding: 20px;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-top: 35px;
+    }
+  }
+}
+
+.auth-template__lock {
+  padding: 30px;
+  padding-bottom: 20px;
+  svg {
+    box-sizing: content-box;
+    padding: 20px;
+    border-radius: 100%;
+    background: colors.$secondary;
+    color: colors.$background;
+    width: 50px;
+    height: auto;
+  }
+}
+
+.auth-template__title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
