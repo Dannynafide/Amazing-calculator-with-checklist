@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
-import colors from '../../../theme/colors.scss';
-import RippleEffect from '../../RippleEffect/RippleEffect';
+
+import colors from 'theme/colors.scss';
+import RippleEffect from 'components/RippleEffect/RippleEffect';
 import './button.scss';
 
 export default function Button(props) {
   const {secondary, className, onClick, disabled, type, children} = props;
-  const styled = secondary ? {background: colors.secondary} : null;
+  const secondButtonStyle = secondary ? {background: colors.secondary} : null;
 
   return (
     <button
       className={`btn-ripple-effect ${className}`}
       type={type === 'submit' ? 'submit' : 'button'}
-      style={styled}
+      style={secondButtonStyle}
       onClick={onClick}
       disabled={disabled}
     >

@@ -1,5 +1,6 @@
 import {useState, useLayoutEffect} from 'react';
 import PropTypes from 'prop-types';
+
 import './rippleEffect.scss';
 
 const useDebouncedRippleCleanUp = (rippleCount, duration, cleanUpFunction) => {

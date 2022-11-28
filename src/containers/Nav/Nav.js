@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import './nav.scss';
+
 import ButtonNav from './ButtonNav/ButtonNav';
+import './nav.scss';
 
 export default function Nav(props) {
   const {mainPage, setMainPage} = props;

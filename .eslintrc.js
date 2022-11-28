@@ -24,4 +24,9 @@ module.exports = {
     'react/jsx-filename-extension': [1, {extensions: ['.js']}],
     'react/destructuring-assignment': [0, 'always'],
   },
+  settings: {
+    'import/resolver': {
+      node: {paths: ['src']},
+    },
+  },
 };

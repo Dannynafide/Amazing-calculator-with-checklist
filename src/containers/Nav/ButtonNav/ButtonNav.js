@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import './buttonNav.scss';
 
 export default function ButtonNav({active, onClick, children}) {

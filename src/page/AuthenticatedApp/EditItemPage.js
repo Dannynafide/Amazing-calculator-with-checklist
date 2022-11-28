@@ -1,6 +1,7 @@
 import {useParams, useNavigate} from 'react-router-dom';
-import {useCalculatorState} from '../../context/calculatorContext';
-import ChangeNameTemplate from '../../templates/ChangeNameTemplate/ChangeNameTemplate';
+
+import {useCalculatorState} from 'context/calculatorContext';
+import ChangeNameTemplate from 'templates/ChangeNameTemplate/ChangeNameTemplate';
 
 export default function EditProjetPage() {
   const {calculationId, itemId} = useParams();

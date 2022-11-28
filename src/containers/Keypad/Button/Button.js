@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import RippleEffect from '../../../components/RippleEffect/RippleEffect';
+
+import RippleEffect from 'components/RippleEffect/RippleEffect';
 import './button.scss';
 
 export default function Button(props) {

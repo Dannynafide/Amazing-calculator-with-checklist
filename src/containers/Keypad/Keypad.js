@@ -2,11 +2,12 @@ import {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {useNavigate} from 'react-router-dom';
 import {IoMdReturnLeft, IoMdArrowBack} from 'react-icons/io';
-import {evaluateCalculator} from '../../helpers/mathFunc';
+
+import {useCalculatorState} from 'context/calculatorContext';
+import {evaluateCalculator} from 'helpers/mathFunc';
+import useFocus from 'hooks/useFocus';
 import Button from './Button/Button';
-import {useCalculatorState} from '../../context/calculatorContext';
 import './Keypad.scss';
-import useFocus from '../../hooks/useFocus';
 
 // const initialValue = [
 //   {id: 0, type: 'number', value: '120'},

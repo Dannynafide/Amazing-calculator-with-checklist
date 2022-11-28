@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+
+import AppBar from 'containers/AppBar/AppBar';
 import './MainTemplate.scss';
-import AppBar from '../../containers/AppBar/AppBar';
 
 export default function MainTemplate({children}) {
   return (

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import {useCalculatorState} from '../../context/calculatorContext';
+
+import {useCalculatorState} from 'context/calculatorContext';
 import AutoTextSize from './AutoTextSize/AutoTextSize';
 import './display.scss';
 

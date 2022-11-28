@@ -1,9 +1,10 @@
 import {Formik, Form, ErrorMessage} from 'formik';
 import PropTypes from 'prop-types';
-import {useAuth} from '../../../context/authContext';
-import AuthTemplate from '../../../templates/AuthTemplate/AuthTemplate';
-import Input from '../../../components/Input/Input';
-import Button from '../../../components/buttons/Button/Button';
+
+import Input from 'components/Input/Input';
+import Button from 'components/buttons/Button/Button';
+import {useAuth} from 'context/authContext';
+import AuthTemplate from 'templates/AuthTemplate/AuthTemplate';
 
 function RegisterPage(props) {
   const {register} = useAuth();

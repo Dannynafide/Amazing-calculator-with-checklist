@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {IoMdLock} from 'react-icons/io';
+
 import './authTemplate.scss';
 
 export default function AuthTemplate({title, children}) {

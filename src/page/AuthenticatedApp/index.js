@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import {CalculatorProvider} from 'context/calculatorContext';
 import HomePage from './HomePage/HomePage';
-import {CalculatorProvider} from '../../context/calculatorContext';
 import EditProjetPage from './EditProjectPage';
 import EditItemPage from './EditItemPage';
 

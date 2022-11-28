@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import './progressBar.scss';
 
 function ProgressBar({progress}) {

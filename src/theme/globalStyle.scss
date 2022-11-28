@@ -1,5 +1,5 @@
-@use '../theme/colors.scss' as colors;
-@use '../theme/font.scss' as font;
+@use 'theme/colors.scss' as colors;
+@use 'theme/font.scss' as font;
 @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
 * {
@@ -9,7 +9,7 @@
 }
 
 p {
-  font-size: font.$s;
+  font-size: font.$m;
 }
 
 body {

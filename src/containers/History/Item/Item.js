@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import {MdClose} from 'react-icons/md';
-import IconButton from '../../../components/buttons/IconButton/IconButton';
-import colors from '../../../theme/colors.scss';
+
+import IconButton from 'components/buttons/IconButton/IconButton';
+import colors from 'theme/colors.scss';
 import './item.scss';
 
 export default function Item({item, children, removeItem}) {

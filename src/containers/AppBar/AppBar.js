@@ -2,12 +2,13 @@ import {useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {useParams, Link, useNavigate} from 'react-router-dom';
 import {MdExitToApp, MdDelete, MdCreate} from 'react-icons/md';
-import {useAuth} from '../../context/authContext';
-import Button from '../../components/buttons/Button/Button';
-import IconButton from '../../components/buttons/IconButton/IconButton';
+
+import {useAuth} from 'context/authContext';
+import {useCalculatorState} from 'context/calculatorContext';
+import Button from 'components/buttons/Button/Button';
+import IconButton from 'components/buttons/IconButton/IconButton';
+import colors from 'theme/colors.scss';
 import HamburgerIcon from './HamburgerIcon/HamburgerIcon';
-import {useCalculatorState} from '../../context/calculatorContext';
-import colors from '../../theme/colors.scss';
 import './appBar.scss';
 
 export default function AppBar() {

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useState, useContext} from 'react';
 import {nanoid} from 'nanoid';
-import {evaluateCalculator} from '../helpers/mathFunc';
+
+import {evaluateCalculator} from 'helpers/mathFunc';
 
 const CalculatorContext = React.createContext();
 

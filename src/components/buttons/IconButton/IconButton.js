@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
-import RippleEffect from '../../RippleEffect/RippleEffect';
+
+import RippleEffect from 'components/RippleEffect/RippleEffect';
 import './iconButton.scss';
 
 export default function IconButton(props) {

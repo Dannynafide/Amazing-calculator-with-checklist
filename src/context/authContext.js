@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState, useMemo} from 'react';
-import * as authClient from '../utils/auth-client';
+
+import * as authClient from 'utils/auth-client';
 
 const AuthContext = React.createContext();
 AuthContext.displayName = 'AuthContext';

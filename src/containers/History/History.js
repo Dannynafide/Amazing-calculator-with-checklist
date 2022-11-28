@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+
+import {useCalculatorState} from 'context/calculatorContext';
 import ItemDetails from './ItemDetails/ItemDetails';
-import {useCalculatorState} from '../../context/calculatorContext';
 import './history.scss';
 import Item from './Item/Item';
 

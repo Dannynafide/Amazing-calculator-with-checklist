@@ -2,10 +2,11 @@ import {Formik} from 'formik';
 import PropTypes from 'prop-types';
 import {MdArrowBack} from 'react-icons/md';
 import {useNavigate} from 'react-router-dom';
-import Input from '../../components/Input/Input';
-import Button from '../../components/buttons/Button/Button';
-import MainTemplate from '../MainTemplate/MainTemplate';
-import IconButton from '../../components/buttons/IconButton/IconButton';
+
+import Input from 'components/Input/Input';
+import Button from 'components/buttons/Button/Button';
+import IconButton from 'components/buttons/IconButton/IconButton';
+import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import './changeNameTemplate.scss';
 
 export default function ChangeNameTemplate({name, value, submit}) {

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import './HamburgerIcon.scss';
 
 export default function HamburgerIcon({checked}) {
