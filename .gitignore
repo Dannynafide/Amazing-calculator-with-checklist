@@ -24,3 +24,6 @@ yarn-error.log*
 
 /.vscode
 .eslintcache
+
+# React Component Preview
+previewConfig.json

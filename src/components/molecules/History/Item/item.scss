@@ -1,0 +1,23 @@
+@use 'theme/font.scss';
+@use 'theme/colors.scss';
+
+.history__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-overflow: ellipsis;
+  color: font.$colorSecondary;
+  line-height: font.$s;
+  font-size: inherit;
+
+  .history__item__remove {
+    padding: 2px;
+  }
+
+  .history__item__cost {
+    max-width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: inherit;
+  }
+}

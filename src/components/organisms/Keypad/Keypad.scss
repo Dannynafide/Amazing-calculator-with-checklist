@@ -1,0 +1,104 @@
+@use 'theme/font.scss';
+@use 'theme/colors.scss';
+
+.keypad {
+  margin: 7px 0px;
+}
+
+.keypad__bracket-keys {
+  display: grid;
+  margin: 12px 0px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+
+  > * {
+    line-height: 20px;
+    color: colors.$primary;
+    background: transparent;
+    border: 1px solid colors.$border;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+}
+
+.keypad__input-keys {
+  display: grid;
+  grid-template-columns: 7fr 1fr auto;
+}
+
+.keypad__input-keys__digit-keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+
+  > * {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: font.$colorPrimary;
+    font-size: font.$m;
+  }
+}
+
+.keypad__input-keys__operator-keys {
+  grid-column-start: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 36px);
+  grid-template-rows: repeat(4, 36px);
+  column-gap: 12px;
+  row-gap: 12px;
+
+  > * {
+    background-color: colors.$primary;
+    border: none;
+    border-radius: 30px;
+    color: colors.$background;
+    font-size: font.$m;
+  }
+
+  .divide-key {
+    font-size: font.$xs;
+    font-weight: bold;
+    transform: rotate(10deg);
+  }
+  .add-key {
+    grid-row: 2 / 4;
+  }
+  .percent-key {
+    font-size: font.$s;
+    font-weight: bold;
+  }
+  .equals-key {
+    grid-column: span 2;
+    background: colors.$secondary;
+
+    display: flex;
+    justify-content: center;
+
+    > * {
+      align-self: center;
+    }
+  }
+}
+
+.keypad__main-input {
+  width: 100%;
+  text-align: right;
+  font-size: font.$m;
+  background: transparent;
+  overflow: hidden;
+  caret-color: colors.$primary;
+  border: none;
+  color: font.$colorPrimary;
+  padding: 5px 0px;
+  border: transparent 2px solid;
+  background-color: lighten(colors.$background, 5%);
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border: mix(colors.$primary, colors.$background) 2px solid;
+    border-radius: 4px;
+  }
+}

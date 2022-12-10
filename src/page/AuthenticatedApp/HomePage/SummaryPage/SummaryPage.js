@@ -1,8 +1,8 @@
 import {useParams} from 'react-router-dom';
 
-import Display from 'components/Display/Display';
-import ProgressBar from 'components/ProgressBar/ProgressBar';
-import History from 'containers/History/History';
+import Display from 'components/atoms/Display/Display';
+import ProgressBar from 'components/atoms/ProgressBar/ProgressBar';
+import History from 'components/molecules/History/History';
 import {useCalculatorState} from 'context/calculatorContext';
 import {evaluateCalculator} from 'helpers/mathFunc';
 import './summaryPage.scss';

@@ -8,3 +8,14 @@ $s: 14px;
 $m: 16px;
 $l: 21px;
 $xl: 24px;
+
+@mixin hideText($height, $lines) {
+  line-height: $height;
+  height: $height * $lines; /* height is 2x line-height, so two lines will display */
+  overflow: hidden; /* prevents extra lines from being visible */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines; /* number of lines to show */
+  line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}

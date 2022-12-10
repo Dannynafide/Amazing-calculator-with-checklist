@@ -1,10 +1,10 @@
 import {Formik} from 'formik';
 import PropTypes from 'prop-types';
 
-import Input from 'components/Input/Input';
-import Button from 'components/buttons/Button/Button';
+import Input from 'components/atoms/Input/Input';
+import Button from 'components/atoms/Button/Button';
 import {useAuth} from 'context/authContext';
-import AuthTemplate from 'templates/AuthTemplate/AuthTemplate';
+import AuthTemplate from 'components/templates/AuthTemplate/AuthTemplate';
 import './loginPage.scss';
 
 export default function Login(props) {

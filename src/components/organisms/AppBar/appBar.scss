@@ -1,0 +1,117 @@
+@use 'theme/colors.scss' as colors;
+@use 'theme/font.scss' as font;
+
+.appbar {
+  height: 45px;
+  position: relative;
+  background-color: colors.$background;
+  color: font.$colorPrimary;
+  z-index: 1;
+
+  .appbar__accordion {
+    padding: 0px 10px;
+    height: 100%;
+    font-size: font.$m;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: colors.$background;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 300px;
+
+    p {
+      max-width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .appbar__accordion__hamburger {
+    font-size: font.$l;
+    &:hover {
+      --color-delete-icon: #7ad6dc;
+    }
+  }
+}
+
+.appbar__dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  overflow: hidden;
+  width: 100%;
+  visibility: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: colors.$background;
+  color: font.$colorPrimary;
+  padding: 10px 15px;
+}
+
+.appbar__dropdown--open {
+  animation-name: show;
+  animation-duration: 0.4s;
+  visibility: visible;
+
+  @keyframes show {
+    0% {
+      transform: translate(0, -100%);
+      z-index: -1;
+    }
+    99% {
+      z-index: -1;
+    }
+
+    100% {
+      transform: translate(0, 0);
+      z-index: 0;
+    }
+  }
+}
+
+.appbar__dropdown--close {
+  animation-name: hide;
+  animation-duration: 0.3s;
+  opacity: 0;
+
+  @keyframes hide {
+    0% {
+      transform: translate(0, 0);
+      visibility: visible;
+      visibility: visible;
+      z-index: -1;
+      opacity: 1;
+    }
+    99% {
+      visibility: visible;
+      z-index: -1;
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(0, -100%);
+      visibility: hidden;
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.appbar__dropdown__wrapper-buttons {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+
+  .mdExitToApp {
+    margin-left: 5px;
+  }
+}
+
+.appbar__dropdown__projects-list {
+  list-style-type: none;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}

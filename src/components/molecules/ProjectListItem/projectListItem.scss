@@ -1,0 +1,36 @@
+@use 'theme/colors.scss' as colors;
+@use 'theme/font.scss' as font;
+
+.projects-list__item {
+  display: grid;
+  grid-template-columns: auto 3fr 2fr auto;
+  column-gap: 5px;
+  align-items: center;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  color: font.$colorPrimary;
+
+  &__name {
+    font-size: font.$m;
+    justify-self: start;
+    text-decoration: none;
+    color: inherit;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:visited {
+      color: font.$colorPrimary;
+    }
+    &:hover {
+      color: colors.$primary;
+    }
+  }
+
+  &__cost {
+    justify-self: end;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

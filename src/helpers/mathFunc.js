@@ -5,7 +5,7 @@ export function evaluateCalculator(value) {
   try {
     evaluateCount = evaluate(value);
     if (evaluateCount === undefined || Number.isNaN(evaluateCount)) {
-      //! wyświietlenie błędu
+      // wyświietlenie błędu
     }
   } catch (error) {
     return undefined;

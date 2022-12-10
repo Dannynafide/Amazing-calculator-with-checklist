@@ -11,6 +11,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'prettier',
     'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -21,12 +22,20 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'react/jsx-filename-extension': [1, {extensions: ['.js']}],
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js'],
+      },
+    ],
     'react/destructuring-assignment': [0, 'always'],
+    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
     'import/resolver': {
-      node: {paths: ['src']},
+      node: {
+        paths: ['src'],
+      },
     },
   },
 };
