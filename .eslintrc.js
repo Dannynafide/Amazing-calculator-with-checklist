@@ -10,7 +10,6 @@ module.exports = {
     'airbnb',
     'plugin:react/jsx-runtime',
     'prettier',
-    'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
   ],
   parserOptions: {
@@ -20,7 +19,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   rules: {
     'react/jsx-filename-extension': [
       1,

@@ -3,7 +3,14 @@ import React, {useState, useMemo} from 'react';
 
 import * as authClient from 'utils/auth-client';
 
-const AuthContext = React.createContext();
+const AuthContext = React.createContext({
+  user: null,
+  isPending: false,
+  error: false,
+  login: () => {},
+  register: () => {},
+  logout: () => {},
+});
 AuthContext.displayName = 'AuthContext';
 
 export function AuthProvider(props) {
