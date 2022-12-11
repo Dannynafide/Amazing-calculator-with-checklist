@@ -48,7 +48,7 @@ function Ripple(props) {
     /* EN - The <div> element has a parent <button> element that triggers the interaction. */
     /* PL - Element <div> ma element nadrzędny <button>, który wywołuje interakcję */
     /* eslint-disable-next-line jsx-a11y/no-static-element-interactions */
-    <div className="ripple" duration={duration} onMouseDown={addRipple}>
+    <div className="ripple" onMouseDown={addRipple}>
       {rippleArray.length > 0 &&
         rippleArray.map((ripple, index) => (
           <span
