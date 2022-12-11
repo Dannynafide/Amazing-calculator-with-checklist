@@ -10,7 +10,7 @@ module.exports = {
     'airbnb',
     'plugin:react/jsx-runtime',
     'prettier',
-    'plugin:react-hooks/recommended',
+    // 'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
   ],
   parserOptions: {
