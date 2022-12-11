@@ -11,7 +11,7 @@ finansowych -zakupy, wakacje, samorozwój a może pasja? To Ty wybierasz cel a p
 kalkulator pomaga przejść tę drogę poprzez szacowanie wydatków.
 
 Wdrożona aplikacja dostępna pod adresem:
-https://eager-murdock-da7cf8.netlify.app
+https://spiffy-platypus-fb82f4.netlify.app
 
 ## Użyte technologie:
 
