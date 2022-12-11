@@ -31,7 +31,7 @@ module.exports = {
     'react/destructuring-assignment': [0, 'always'],
     'react/jsx-props-no-spreading': 'off',
     'react/no-unknown-property': ['error', {ignore: ['css']}],
-    'react-hooks/exhaustive-deps': 'off',
+    // 'react-hooks/exhaustive-deps': 'off',
   },
   settings: {
     'import/resolver': {
