@@ -17,7 +17,6 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.0",
     "sass": "^1.51.0",
-    "use-fit-text": "^2.4.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -63,7 +62,8 @@
     "eslint-plugin-storybook": "^0.6.7",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
-    "prettier": "2.5.1",
+    "postcss": "^8.4.19",
+    "prettier": "^2.8.1",
     "webpack": "^5.75.0"
   },
   "lint-staged": {
@@ -72,17 +72,5 @@
       "prettier --config .prettierrc --write"
     ],
     "*.{js,css,md}": "prettier --write"
-  },
-  "eslintConfig": {
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
   }
 }

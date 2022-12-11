@@ -1,5 +1,13 @@
 @use 'theme/font.scss';
 
+$menu-height: null;
+$menu-gutter: null;
+$menu-color: null;
+$menu-margin: null;
+$menu-margin-left: null;
+$menu-margin-top: null;
+$menu-top: null;
+
 :root {
   --color-delete-icon: white;
 }
@@ -11,7 +19,7 @@
 }
 
 @function rem($size) {
-  $remSize: $size / 16px;
+  $remSize: calc($size / 16px);
   @return $remSize * 1rem;
 }
 // The mixin
@@ -35,8 +43,8 @@
 
   // Set margins
   $margin: $height + $gutter;
-  $margin-left: $width / 2;
-  $margin-top: $height / 2;
+  $margin-left: calc($width / 2);
+  $margin-top: calc($height / 2);
 
   // Set specific styles for each bar
   $top: $height + $gutter;
@@ -57,7 +65,7 @@
   text-indent: -999em;
   top: 50%;
   left: 50%;
-  margin-top: -#{$menu-height/2};
+  margin-top: -#{calc($menu-height/2)};
   cursor: pointer;
 
   // Set styles to bars
@@ -96,7 +104,7 @@
   &:before,
   &:after {
     top: 0px;
-    margin-top: -#{($menu-height/2) + ($menu-gutter + $menu-height)};
+    margin-top: -#{(calc($menu-height/2)) + ($menu-gutter + $menu-height)};
     @content;
   }
   & {

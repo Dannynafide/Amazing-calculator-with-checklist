@@ -10,6 +10,7 @@ module.exports = {
     'airbnb',
     'plugin:react/jsx-runtime',
     'prettier',
+    'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
   ],
   parserOptions: {
@@ -37,4 +38,12 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['**/*.stories.*'],
+      rules: {
+        'import/no-anonymous-default-export': 'off',
+      },
+    },
+  ],
 };
